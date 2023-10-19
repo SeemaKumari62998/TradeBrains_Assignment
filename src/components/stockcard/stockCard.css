@@ -1,73 +1,82 @@
-.stockCard__button{
-    display: flex;
-    justify-content: flex-end;
+.stockCard__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.button{
-    margin: 50px;
-    height:3em;
-    padding: 1em;
-    background:#15d63c;
-    outline: none;
-    border: none;
-    border-radius: 10%;
-    cursor: pointer;
+.button {
+  height: 3em;
+  padding: 1em;
+  background: #d6f3dc;
+  outline: none;
+  border: none;
+  border-radius: 400px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 45px;
 }
 
-.card{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.container_add {
+  display: flex;
+  justify-content: center;
+  /* display: ; */
 }
 
-.stockCard{
-    background: black;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    margin: 1em;
-    color: white;
-    border-radius: 5px;
-    padding: 1em;
-    width: 25%;
+.card {
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.card__item{
-    font-weight: bolder;
+.stockCard {
+  background: rgb(229, 229, 229);
+  box-shadow: rgba(233, 233, 233, 0.2) 0px 2px 8px 0px;
+  /* margin: 5em; */
+  color: rgb(25, 25, 25);
+  border-radius: 5px;
+  padding: 20px;
+  width: 100%;
+  margin: 45px;
 }
 
-.card__details{
-    display: flex;
-    justify-content: space-between;
-
+.card__item {
+  font-weight: bolder;
 }
 
-.card__open{
-    color: #eddd4c;
+.card__details {
+  display: flex;
+  justify-content: space-between;
 }
 
-.card__volume{
-    color: #5447c9;
+.card__open {
+  color: #161615;
 }
 
-.card__high{
-    color: #4df76f;
+.card__volume {
+  color: #0f0e0f;
 }
 
-.card__low{
-    color: #eb0707;
+.card__high {
+  color: #131313;
 }
 
-.card__close{
-    color: #db771f;
+.card__low {
+  color: #111010;
 }
 
-@media screen and (max-width: 1000px){
-    .stockCard{
-        width: 40%;
-    }
+.card__close {
+  color: #0c0c0c;
 }
 
-@media screen and (max-width: 640px){
-    .stockCard{
-        width: 70%;
-    }
+@media screen and (max-width: 1000px) {
+  .stockCard {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .stockCard {
+    width: 70%;
+  }
 }

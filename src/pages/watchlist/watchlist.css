@@ -1,11 +1,10 @@
 .stocks {
-  background: #4e73af;
-  margin: 10px;
-  padding: 10px;
+  margin: 2px;
 }
 
 .stocks__div {
-  background: black;
+  /* background: rgb(127, 128, 127); */
+  background-color: rgb(30, 0, 179);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -40,7 +39,7 @@
 }
 
 .title {
-  color: beige;
+  color: rgb(249, 249, 249);
 }
 
 @media screen and (max-width: 500px) {

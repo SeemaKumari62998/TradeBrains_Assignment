@@ -1,6 +1,6 @@
 // import { getStockData, wishlistdata } from  "../../redux/slices/stocks";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { wishlistHandler } from "../../redux/slices/stocks";
+import { useAppDispatch, useAppSelector } from "../../redux/redux_hooks";
+import { wishlistHandler } from "../../redux/slices/stock_pages";
 import Header from "../../components/header/Header";
 import "./watchlist.css";
 export default function Wishlist() {
@@ -32,14 +32,14 @@ export default function Wishlist() {
                           <div>
                             <div className="stocks__card">
                               <p className="bold">Open:</p>
-                              <p style={{ color: "#eddd4c" }}>
+                              <p style={{ color: "white" }}>
                                 {item?.stockhistory[`${stock}`]["1. open"]}
                               </p>
                             </div>
 
                             <div className="stocks__card">
                               <p className="bold">High:</p>
-                              <p style={{ color: "#4df76f" }}>
+                              <p style={{ color: "white" }}>
                                 {item?.stockhistory[`${stock}`]["2. high"]}
                               </p>
                             </div>
@@ -47,13 +47,13 @@ export default function Wishlist() {
                           <div>
                             <div className="stocks__card">
                               <p className="bold">Low:</p>
-                              <p style={{ color: "#eb0707" }}>
+                              <p style={{ color: "white" }}>
                                 {item?.stockhistory[`${stock}`]["3. low"]}
                               </p>
                             </div>
                             <div className="stocks__card">
                               <p sclassName="bold">Close:</p>
-                              <p style={{ color: "#db771f" }}>
+                              <p style={{ color: "white" }}>
                                 {item?.stockhistory[`${stock}`]["4. close"]}
                               </p>
                             </div>
@@ -67,7 +67,7 @@ export default function Wishlist() {
                             }}
                             className="button"
                           >
-                            Delete
+                            REMOVE
                           </button>
                         </div>
                       )}

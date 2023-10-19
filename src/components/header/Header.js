@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../../assets/back.png";
 import "./Header.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Header() {
   const navigate = useNavigate();
@@ -12,9 +12,14 @@ export default function Header() {
 
   return (
     <div className="header">
-      <div className="logo__container">
+      {/* <div className="logo__container">
         {" "}
         <img className="logo" src={Logo} alt="Logo" onClick={navigator} />
+      </div> */}
+      <div>
+        <Link to="/" className="home">
+          Home
+        </Link>
       </div>
     </div>
   );

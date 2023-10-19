@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { getStockData } from "../../redux/slices/stocks";
+import { useAppDispatch, useAppSelector } from "../../redux/redux_hooks";
+import { getStockData } from "../../redux/slices/stock_pages";
 import StockCard from "../../components/stockcard/stockCard";
 import "./Home.css";
 import Header from "../../components/header/Header";
-import Cart from "../../assets/Add_image.png";
+import Cart from "../../assets/menu.png";
 import { useNavigate } from "react-router-dom";
 
 export default function Home() {
@@ -38,15 +38,20 @@ export default function Home() {
       <div className="header__cart">
         <Header />
       </div>
-      <div className="home">
-        <h1>Home</h1>
-      </div>
+      {/* <div className="home">
+        <h1>HOME</h1>
+      </div> */}
+      <h1>Add Stocks</h1>
       <div className="add-search">
         <div className="search__bar">
-          <input onChange={searchStock} placeholder="Please enter stock name" />
+          <input
+            onChange={searchStock}
+            placeholder="Enter stock...."
+            className="stock_input"
+          />
         </div>
 
-        <div onClick={navigator}>
+        <div onClick={navigator} className="menu_div">
           <img className="cart" src={Cart} alt="Logo" />
         </div>
       </div>
@@ -74,7 +79,7 @@ export default function Home() {
                 <div>
                   {(Object.keys(stockInfo).includes("Error Message") ||
                     Object.keys(stockInfo).includes("Note")) && (
-                    <span>No Data Found!</span>
+                    <span>Not Found</span>
                   )}
                 </div>
               )}
