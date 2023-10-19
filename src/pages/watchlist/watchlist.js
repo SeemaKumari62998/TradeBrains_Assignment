@@ -1,4 +1,3 @@
-// import { getStockData, wishlistdata } from  "../../redux/slices/stocks";
 import { useAppDispatch, useAppSelector } from "../../redux/redux_hooks";
 import { wishlistHandler } from "../../redux/slices/stock_pages";
 import Header from "../../components/header/Header";

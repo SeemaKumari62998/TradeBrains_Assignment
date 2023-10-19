@@ -10,14 +10,9 @@
 }
 
 .search__bar {
-  /* width: 30%;
-  margin: 6em auto; */
-
   height: 50px;
   padding: 20px;
 
-  /* border: solid rgb(18, 17, 17);
-  background-color: rgb(243, 245, 247); */
   display: flex;
 }
 
@@ -28,8 +23,6 @@
 .cart {
   max-width: 50px;
   max-height: 50px;
-  /* cursor: pointer;
-  margin-right: 4em; */
 }
 
 .stock_input {

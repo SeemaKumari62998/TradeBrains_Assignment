@@ -38,9 +38,7 @@ export default function Home() {
       <div className="header__cart">
         <Header />
       </div>
-      {/* <div className="home">
-        <h1>HOME</h1>
-      </div> */}
+
       <h1>Add Stocks</h1>
       <div className="add-search">
         <div className="search__bar">

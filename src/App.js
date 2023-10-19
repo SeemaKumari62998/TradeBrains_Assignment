@@ -1,11 +1,7 @@
 import "./App.css";
 import Home from "./pages/Home/Home";
 import Wishlist from "./pages/watchlist/watchlist";
-import {
-  BrowserRouter,
-  Routes, //replaces "Switch" used till v5
-  Route,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -17,7 +13,6 @@ function App() {
             <Route exact path="/watchlist" element={<Wishlist />} />
           </Routes>
         </BrowserRouter>
-        {/* <Home/> */}
       </div>
     </div>
   );

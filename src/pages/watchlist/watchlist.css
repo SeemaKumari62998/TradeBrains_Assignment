@@ -3,7 +3,6 @@
 }
 
 .stocks__div {
-  /* background: rgb(127, 128, 127); */
   background-color: rgb(30, 0, 179);
   display: flex;
   flex-wrap: wrap;

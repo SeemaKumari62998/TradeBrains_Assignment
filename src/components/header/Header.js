@@ -12,10 +12,6 @@ export default function Header() {
 
   return (
     <div className="header">
-      {/* <div className="logo__container">
-        {" "}
-        <img className="logo" src={Logo} alt="Logo" onClick={navigator} />
-      </div> */}
       <div>
         <Link to="/" className="home">
           Home
