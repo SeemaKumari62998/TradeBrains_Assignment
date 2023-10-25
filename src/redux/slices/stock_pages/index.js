@@ -26,7 +26,7 @@ export const stockSlicer = createSlice({
 export const { stockdata, wishlistdata, wishlistFilter } = stockSlicer.actions;
 
 export const getStockData = (symbol) => async (dispatch) => {
-  const url = `https://dev.portal.tradebrains.in/api/search?keyword=reliance`;
+  const url = `https://dev.portal.tradebrains.in/api/search?keyword=${symbol}`;
   const response = await axios.get(url);
   console.log(response, "after call");
   dispatch(stockdata(response.data));
