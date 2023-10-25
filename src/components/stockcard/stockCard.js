@@ -1,12 +1,13 @@
 import React from "react";
 import "./stockCard.css";
+import { setWhislist } from "../../redux/slices/stock_pages";
 import { useAppDispatch } from "../../redux/redux_hooks";
-import { setWishlist } from "../../redux/redux_hooks";
+
 export default function StockCard({ data }) {
   const dispatch = useAppDispatch();
 
   const addDataToCart = (data) => {
-    dispatch(setWishlist(data));
+    dispatch(setWhislist(data));
   };
 
   return (
@@ -14,7 +15,8 @@ export default function StockCard({ data }) {
       <div className="stockCard">
         <p>{data?.symbol}</p>
         <p>{data?.company}</p>
-        <div className="stockCard__button">
+
+        <div className="stockcard__button">
           <button
             className="button"
             onClick={() => {
