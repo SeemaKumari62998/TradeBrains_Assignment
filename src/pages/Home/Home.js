@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../redux/redux_hooks";
 import { getStockData } from "../../redux/slices/stock_pages";
 import StockCard from "../../components/stockcard/stockCard";
@@ -12,7 +12,7 @@ export default function Home() {
   const stock = useAppSelector((state) => state.stock.data);
   const [isSuggestion, setIsSuggestion] = useState(true);
   const [stockdetail, setStockDetail] = useState({});
-
+  // useEffect();
   const dispatch = useAppDispatch();
 
   const searchStock = (event) => {
