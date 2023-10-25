@@ -26,9 +26,7 @@ export const stockSlicer = createSlice({
 export const { stockdata, wishlistdata, wishlistFilter } = stockSlicer.actions;
 
 export const getStockData = (symbol) => async (dispatch) => {
-  // const apiKey = "Y4KPDJET3EDVC856";
-  // const url = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${symbol}&interval=5min&apikey=${apiKey}`;
-  const url = `https://dev.portal.tradebrains.in/api/search?keyword=$(symbol`;
+  const url = `https://dev.portal.tradebrains.in/api/search?keyword=reliance`;
   const response = await axios.get(url);
   console.log(response, "after call");
   dispatch(stockdata(response.data));

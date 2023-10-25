@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../redux/redux_hooks";
 import { getStockData } from "../../redux/slices/stock_pages";
 import StockCard from "../../components/stockcard/stockCard";
@@ -17,10 +17,9 @@ export default function Home() {
 
   const searchStock = (event) => {
     setIsSuggestion(true);
-    let searchTerm = event.target.value.toUpperCase();
-    console.log(searchTerm);
+    let searchTerm = event.target.value;
     if (searchTerm.length > 1) {
-      dispatch(getStockData(searchTerm));
+      dispatch(getStockData(searchTerm.toUpperCase()));
     }
   };
 
@@ -30,6 +29,7 @@ export default function Home() {
 
   const updateStock = (data) => {
     setStockDetail(data);
+    setIsSuggestion(false);
   };
 
   return (
@@ -54,29 +54,32 @@ export default function Home() {
       </div>
 
       <div className="display__items">
-        {isSuggestion ? (
-          <div className="api__data">
-            {stock.map((item, index) => (
-              <div className="api__data__display" key={index}>
-                <p
-                  onClick={() => {
-                    setIsSuggestion(false);
-                    updateStock(item);
-                  }}
-                  className="symbol"
-                >
-                  {item?.company}
-                </p>
-              </div>
-            ))}
-          </div>
-        ) : (
+        {isSuggestion && (
           <div>
-            <span>data not found</span>
+            {stock.length > 0 ? (
+              <div className="api__data">
+                {stock.map((item, index) => (
+                  <div className="api__data__display" key={index}>
+                    <p
+                      onClick={() => {
+                        updateStock(item);
+                      }}
+                      className="symbol"
+                    >
+                      {item?.company}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div>
+                <span>data not found</span>
+              </div>
+            )}
           </div>
         )}
+        {stockdetail?.company && <StockCard data={stockdetail} />}
       </div>
-      {stockdetail?.company && <StockCard data={stockdetail} />}
     </div>
   );
 }
